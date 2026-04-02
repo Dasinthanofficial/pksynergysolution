@@ -1,5 +1,13 @@
+// FILE: C:\Users\dasin\Downloads\pk-synergy\src\components\ContactSection.jsx
 import { motion } from "framer-motion";
-import { ArrowUpRight, MessageSquareMore } from "lucide-react";
+import { 
+  ArrowUpRight, 
+  MessageSquareMore, 
+  MapPin, 
+  Mail, 
+  Phone, 
+  Globe 
+} from "lucide-react";
 import Container from "./Container";
 
 const ContactSection = ({ companyName }) => {
@@ -33,9 +41,9 @@ const ContactSection = ({ companyName }) => {
               </h2>
 
               <p className="mt-6 max-w-2xl text-base leading-8 text-slate-600 sm:text-lg">
-                This contact form interface is prepared for future backend
-                integration. Verified company information from the provided
-                profile has been preserved without adding unspecified details.
+                Reach out to us to discuss how we can elevate your agricultural and
+                estate management operations. Our team is ready to provide tailored
+                solutions for your unique needs.
               </p>
             </div>
 
@@ -51,11 +59,42 @@ const ContactSection = ({ companyName }) => {
                 {companyName}
               </h3>
 
-              <p className="mt-4 text-sm leading-7 text-slate-600">
-                Office address, email, phone number, and website link were not
-                specified in the source PDF, so they are intentionally not shown
-                here.
-              </p>
+              {/* FIXED: Added the real contact information with icons */}
+              <div className="mt-8 flex flex-col gap-5">
+                <div className="flex items-start gap-3 text-sm text-slate-600">
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-soft text-brand">
+                    <MapPin size={16} />
+                  </span>
+                  <span className="pt-1 leading-relaxed">39, Vivekananthanagar west</span>
+                </div>
+                
+                <div className="flex items-center gap-3 text-sm text-slate-600">
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-soft text-brand">
+                    <Mail size={16} />
+                  </span>
+                  <a href="mailto:info@pksynergy.lk" className="font-medium transition hover:text-brand">
+                    info@pksynergy.lk
+                  </a>
+                </div>
+
+                <div className="flex items-center gap-3 text-sm text-slate-600">
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-soft text-brand">
+                    <Phone size={16} />
+                  </span>
+                  <a href="tel:0751771778" className="font-medium transition hover:text-brand">
+                    075 177 1778
+                  </a>
+                </div>
+
+                <div className="flex items-center gap-3 text-sm text-slate-600">
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-soft text-brand">
+                    <Globe size={16} />
+                  </span>
+                  <a href="https://www.pksynergy.lk" target="_blank" rel="noopener noreferrer" className="font-medium transition hover:text-brand">
+                    www.pksynergy.lk
+                  </a>
+                </div>
+              </div>
             </div>
           </motion.div>
 
@@ -78,8 +117,7 @@ const ContactSection = ({ companyName }) => {
             </h3>
 
             <p className="mt-4 text-sm leading-8 text-slate-600 sm:text-base">
-              A modern contact form interface designed for future backend
-              connectivity.
+              Fill out the form below and our team will get back to you promptly.
             </p>
 
             <form className="mt-8 space-y-5">

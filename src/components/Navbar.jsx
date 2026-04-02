@@ -33,7 +33,7 @@ const Navbar = ({ companyName }) => {
 
               <div className="min-w-0">
                 {/* FIXED: Scales text down for tiny mobile screens so it doesn't truncate */}
-                <h1 className="truncate text-[13px] font-bold uppercase tracking-wider text-slate-800 [text-shadow:_1px_1px_0_rgb(0_0_0_/_15%)] min-[390px]:text-sm sm:text-base lg:text-lg">
+                <h1 className="truncate font-['Outfit'] text-[15px] tracking-tight text-slate-900 min-[390px]:text-base sm:text-xl">
                   PK Synergy <span className="text-brand">Solution</span>
                 </h1>
               </div>

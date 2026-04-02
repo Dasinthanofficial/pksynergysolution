@@ -34,7 +34,7 @@ const Navbar = ({ companyName }) => {
 
                             <div className="min-w-0">
                                 {/* FIXED: Professional two-tone styling, semi-bold weight, matching the slate heading colors */}
-                                <h1 className="truncate text-base font-extrabold uppercase tracking-wider text-slate-800 [text-shadow:_1px_1px_0_rgb(0_0_0_/_15%)] sm:text-lg">
+                                <h1 className="truncate text-base font-bold uppercase tracking-wider text-slate-800 [text-shadow:_1px_1px_0_rgb(0_0_0_/_15%)] sm:text-lg">
                                     PK Synergy <span className="text-brand">Solution</span>
                                 </h1>
                             </div>

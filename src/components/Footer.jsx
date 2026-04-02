@@ -11,7 +11,7 @@ const Footer = ({ companyName }) => {
         <div className="grid gap-12 border-b border-white/10 pb-12 lg:grid-cols-[1.3fr_0.7fr_0.7fr]">
           {/* Brand */}
           <div>
-            <p className="text-xs uppercase tracking-[0.28em] text-white/35">
+            <p className="text-xs font-['Outfit'] uppercase tracking-[0.28em] text-white/35">
               PK Synergy Solution
             </p>
 

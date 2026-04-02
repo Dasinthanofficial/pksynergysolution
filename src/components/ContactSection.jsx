@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight, BadgeInfo, Building2 } from "lucide-react";
+import { ArrowUpRight, MessageSquareMore } from "lucide-react";
 import Container from "./Container";
 
 const ContactSection = ({ companyName }) => {
@@ -12,8 +12,8 @@ const ContactSection = ({ companyName }) => {
       <div className="absolute right-0 bottom-0 -z-10 h-72 w-72 rounded-full bg-emerald-900/10 blur-3xl" />
 
       <Container>
-        <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr]">
-          {/* left */}
+        <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
+          {/* Left content */}
           <motion.div
             initial={{ opacity: 0, y: 26 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -29,32 +29,37 @@ const ContactSection = ({ companyName }) => {
               <h2 className="max-w-3xl text-4xl font-semibold leading-[0.95] tracking-[-0.05em] text-slate-950 sm:text-6xl">
                 Ready to Connect with
                 <br />
-                PK Synergy Solution?
+                {companyName}?
               </h2>
 
               <p className="mt-6 max-w-2xl text-base leading-8 text-slate-600 sm:text-lg">
-                Below is the verified company information available in the
-                provided profile.
+                This contact form interface is prepared for future backend
+                integration. Verified company information from the provided
+                profile has been preserved without adding unspecified details.
               </p>
             </div>
 
-            <div className="mt-10">
-              <div className="group rounded-[2rem] border border-white/60 bg-white/80 p-6 shadow-[0_20px_60px_rgba(12,20,16,0.08)] backdrop-blur transition duration-300 hover:-translate-y-1">
-                <div className="mb-5 inline-flex rounded-2xl bg-brand-soft p-4 text-brand">
-                  <Building2 size={24} />
-                </div>
-
-                <p className="text-xs uppercase tracking-[0.2em] text-slate-500">
-                  Company Name
-                </p>
-                <h3 className="mt-3 text-2xl font-semibold tracking-tight text-slate-950">
-                  {companyName}
-                </h3>
+            <div className="mt-10 rounded-[2rem] border border-white/60 bg-white/80 p-6 shadow-[0_20px_60px_rgba(12,20,16,0.08)] backdrop-blur">
+              <div className="mb-4 inline-flex rounded-2xl bg-brand-soft p-4 text-brand">
+                <MessageSquareMore size={24} />
               </div>
+
+              <p className="text-xs uppercase tracking-[0.2em] text-slate-500">
+                Company Name
+              </p>
+              <h3 className="mt-3 text-2xl font-semibold tracking-tight text-slate-950">
+                {companyName}
+              </h3>
+
+              <p className="mt-4 text-sm leading-7 text-slate-600">
+                Office address, email, phone number, and website link were not
+                specified in the source PDF, so they are intentionally not shown
+                here.
+              </p>
             </div>
           </motion.div>
 
-          {/* right */}
+          {/* Right form */}
           <motion.div
             initial={{ opacity: 0, x: 26 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -62,34 +67,75 @@ const ContactSection = ({ companyName }) => {
             transition={{ duration: 0.75 }}
             className="rounded-[2rem] border border-white/60 bg-white/80 p-8 shadow-[0_30px_90px_rgba(12,20,16,0.08)] backdrop-blur sm:p-10"
           >
-            <div className="mb-5 inline-flex rounded-2xl bg-brand p-4 text-white shadow-lg">
-              <BadgeInfo size={22} />
+            <div className="mb-6">
+              <span className="inline-flex rounded-2xl bg-brand p-4 text-white shadow-lg">
+                <ArrowUpRight size={22} />
+              </span>
             </div>
 
             <h3 className="text-2xl font-semibold tracking-tight text-slate-950 sm:text-3xl">
-              Important Note
+              Send an Inquiry
             </h3>
 
-            <p className="mt-6 text-sm leading-8 text-slate-600 sm:text-base">
-              The provided PDF includes placeholders for office address, email,
-              phone number, and website link.
-            </p>
-
             <p className="mt-4 text-sm leading-8 text-slate-600 sm:text-base">
-              Since those details were not specified in the source file, they
-              are intentionally not displayed here to ensure the website
-              contains only correct and verified information.
+              A modern contact form interface designed for future backend
+              connectivity.
             </p>
 
-            <div className="mt-8 rounded-[1.6rem] bg-gradient-to-r from-brand to-brand-dark p-6 text-white shadow-lg">
-              <div className="flex items-start justify-between gap-4">
-                <p className="max-w-md text-sm leading-7 text-white/85 sm:text-base">
-                  This section is ready for future backend integration such as a
-                  dynamic contact form, CRM, or admin-managed company data.
-                </p>
-                <ArrowUpRight className="shrink-0 text-white/80" size={20} />
+            <form className="mt-8 space-y-5">
+              <div className="grid gap-5 sm:grid-cols-2">
+                <div>
+                  <label className="mb-2 block text-sm font-medium text-slate-700">
+                    Full Name
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Enter your name"
+                    className="w-full rounded-2xl border border-emerald-900/10 bg-[#f7faf8] px-4 py-3.5 text-sm text-slate-800 outline-none transition focus:border-brand focus:ring-2 focus:ring-brand/10"
+                  />
+                </div>
+
+                <div>
+                  <label className="mb-2 block text-sm font-medium text-slate-700">
+                    Email Address
+                  </label>
+                  <input
+                    type="email"
+                    placeholder="Enter your email"
+                    className="w-full rounded-2xl border border-emerald-900/10 bg-[#f7faf8] px-4 py-3.5 text-sm text-slate-800 outline-none transition focus:border-brand focus:ring-2 focus:ring-brand/10"
+                  />
+                </div>
               </div>
-            </div>
+
+              <div>
+                <label className="mb-2 block text-sm font-medium text-slate-700">
+                  Subject
+                </label>
+                <input
+                  type="text"
+                  placeholder="Enter subject"
+                  className="w-full rounded-2xl border border-emerald-900/10 bg-[#f7faf8] px-4 py-3.5 text-sm text-slate-800 outline-none transition focus:border-brand focus:ring-2 focus:ring-brand/10"
+                />
+              </div>
+
+              <div>
+                <label className="mb-2 block text-sm font-medium text-slate-700">
+                  Message
+                </label>
+                <textarea
+                  rows="6"
+                  placeholder="Write your message..."
+                  className="w-full rounded-2xl border border-emerald-900/10 bg-[#f7faf8] px-4 py-3.5 text-sm text-slate-800 outline-none transition focus:border-brand focus:ring-2 focus:ring-brand/10 resize-none"
+                ></textarea>
+              </div>
+
+              <button
+                type="button"
+                className="inline-flex w-full items-center justify-center rounded-2xl bg-brand px-6 py-4 text-sm font-semibold text-white shadow-[0_18px_35px_rgba(13,74,51,0.22)] transition duration-300 hover:-translate-y-0.5 hover:bg-brand-dark sm:w-auto"
+              >
+                Send Message
+              </button>
+            </form>
           </motion.div>
         </div>
       </Container>

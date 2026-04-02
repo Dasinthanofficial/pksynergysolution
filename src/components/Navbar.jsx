@@ -29,12 +29,12 @@ const Navbar = ({ companyName }) => {
                             <img
                                 src={logo}
                                 alt="PK Synergy Solution logo"
-                                className="h-9 w-9 shrink-0 rounded-lg object-contain bg-white shadow-sm sm:h-10 sm:w-10"
+                                className="h-10 w-10 shrink-0 rounded-full object-cover bg-white shadow-md ring-1 ring-slate-900/5 sm:h-11 sm:w-11"
                             />
 
                             <div className="min-w-0">
                                 {/* FIXED: Professional two-tone styling, semi-bold weight, matching the slate heading colors */}
-                                <h1 className="truncate text-lg font-bold uppercase tracking-widest text-slate-800 [text-shadow:_2px_2px_4px_rgb(0_0_0_/_25%)] sm:text-[1.4rem]">
+                                <h1 className="truncate text-base font-extrabold uppercase tracking-wider text-slate-800 [text-shadow:_1px_1px_0_rgb(0_0_0_/_15%)] sm:text-lg">
                                     PK Synergy <span className="text-brand">Solution</span>
                                 </h1>
                             </div>

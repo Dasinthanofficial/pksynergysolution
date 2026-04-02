@@ -14,8 +14,10 @@ const HeroSection = ({ data }) => {
         backgroundRepeat: "no-repeat",
       }}
     >
-      {/* dark gradient only on left for text readability */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/65 via-black/30 to-transparent" />
+      {/* FIXED: Darker overlay for mobile so text is completely readable. 
+          On desktop (sm:), it switches back to the nice side-fade gradient. */}
+      <div className="absolute inset-0 bg-black/40 sm:bg-black/0" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/60 sm:bg-gradient-to-r sm:from-black/80 sm:via-black/40 sm:to-transparent" />
 
       {/* soft glow accents */}
       <div className="absolute left-0 top-0 h-[420px] w-[420px] rounded-full bg-lime-300/10 blur-3xl" />
@@ -29,8 +31,8 @@ const HeroSection = ({ data }) => {
             transition={{ duration: 0.85, ease: "easeOut" }}
             className="max-w-4xl"
           >
-          
-            <h1 className="text-5xl font-semibold leading-[0.92] tracking-[-0.07em] text-white sm:text-7xl lg:text-[6.25rem]">
+            {/* Added drop-shadow-lg to make heading pop over background */}
+            <h1 className="text-5xl font-semibold leading-[0.92] tracking-[-0.07em] text-white drop-shadow-lg sm:text-7xl lg:text-[6.25rem]">
               Precision.
               <br />
               Growth.
@@ -38,7 +40,8 @@ const HeroSection = ({ data }) => {
               <span className="italic text-lime-300">Sustainability.</span>
             </h1>
 
-            <p className="mt-8 max-w-2xl text-base leading-8 text-white/85 sm:text-lg">
+            {/* FIXED: Made text fully white and added a drop-shadow for mobile readability */}
+            <p className="mt-8 max-w-2xl text-base leading-8 text-white drop-shadow-md sm:text-lg">
               {data.executiveSummary}
             </p>
 
@@ -63,10 +66,10 @@ const HeroSection = ({ data }) => {
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.35 }}
-              className="mt-10 inline-flex max-w-xl items-center gap-3 rounded-2xl border border-white/20 bg-white/10 px-5 py-4 text-sm text-white/90 shadow-lg backdrop-blur"
+              className="mt-10 inline-flex max-w-xl items-center gap-3 rounded-2xl border border-white/20 bg-white/10 px-5 py-4 text-sm text-white shadow-lg backdrop-blur"
             >
               <ShieldCheck size={18} className="shrink-0 text-lime-300" />
-              <span className="leading-6">
+              <span className="leading-6 drop-shadow-sm">
                 Bridging time-honored expertise with cutting-edge technology for
                 productivity and lasting sustainability.
               </span>

@@ -54,7 +54,7 @@ const ServicesSection = () => {
           </span>
 
           <h2 className="max-w-4xl text-4xl font-semibold leading-[0.95] tracking-[-0.05em] text-white sm:text-5xl lg:text-6xl">
-            PK Synergy Solution stands on two strong pillars
+            PK Synergy Solution stands on <br /> Two strong pillars
           </h2>
 
                  </motion.div>

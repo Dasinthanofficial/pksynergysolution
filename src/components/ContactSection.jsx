@@ -40,13 +40,24 @@ const ContactSection = ({ companyName }) => {
 
     const form = event.currentTarget;
     const formData = new FormData(form);
+
+    // Use .set() instead of .append() to strictly avoid duplicate fields
+    formData.set("access_key", import.meta.env.VITE_WEB3FORMS_ACCESS_KEY);
+    formData.set("from_name", companyName || "PK Synergy Solutions");
     formData.set("phone", phone ?? "");
-    formData.append("access_key", import.meta.env.VITE_WEB3FORMS_ACCESS_KEY);
+
+    // Convert FormData to JSON (Recommended by Web3Forms for React)
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        body: formData,
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: json,
       });
 
       const data = await response.json();
@@ -193,8 +204,6 @@ const ContactSection = ({ companyName }) => {
             </p>
 
             <form onSubmit={onSubmit} className="mt-8 space-y-5">
-              <input type="hidden" name="phone" value={phone ?? ""} />
-
               {/* Row 1 */}
               <div className="grid gap-5 md:grid-cols-2">
                 <div className="min-w-0">

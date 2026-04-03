@@ -1,12 +1,12 @@
 // FILE: C:\Users\dasin\Downloads\pk-synergy\src\components\ContactSection.jsx
 import { motion } from "framer-motion";
-import { 
-  ArrowUpRight, 
-  MessageSquareMore, 
-  MapPin, 
-  Mail, 
-  Phone, 
-  Globe 
+import {
+  ArrowUpRight,
+  MessageSquareMore,
+  MapPin,
+  Mail,
+  Phone,
+  Globe
 } from "lucide-react";
 import Container from "./Container";
 
@@ -41,7 +41,7 @@ const ContactSection = ({ companyName }) => {
               </h2>
 
               <p className="mt-6 max-w-2xl text-base leading-8 text-slate-600 sm:text-lg">
-                Reach out to us to discuss how we can elevate your need . Our team is ready to provide customized
+                Reach out to us to discuss how we can elevate your need. Our team is ready to provide customized
                 Solutionss for your unique needs.
               </p>
             </div>
@@ -51,9 +51,6 @@ const ContactSection = ({ companyName }) => {
                 <MessageSquareMore size={24} />
               </div>
 
-              <p className="text-xs uppercase tracking-[0.2em] text-slate-500">
-                Company Name
-              </p>
               <h3 className="mt-3 text-2xl font-semibold tracking-tight text-slate-950">
                 {companyName}
               </h3>
@@ -66,7 +63,7 @@ const ContactSection = ({ companyName }) => {
                   </span>
                   <span className="pt-1 leading-relaxed">39, Vivekananthanagar west</span>
                 </div>
-                
+
                 <div className="flex items-center gap-3 text-sm text-slate-600">
                   <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-soft text-brand">
                     <Mail size={16} />

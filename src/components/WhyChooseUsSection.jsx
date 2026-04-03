@@ -75,7 +75,7 @@ const WhyChooseSection = ({ text }) => {
 
             <div className="mt-8 rounded-[1.5rem] bg-gradient-to-r from-brand to-brand-dark p-6 text-white shadow-lg">
               <p className="text-sm leading-7 text-white/85 sm:text-base">
-                We cultivate your satisfaction.
+                We guarantee your satisfaction.
               </p>
             </div>
           </motion.div>

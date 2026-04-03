@@ -26,3 +26,71 @@ body {
   --color-accent: #d6f36d;
   --color-muted: #607065;
 }
+
+
+.phone-input-shell {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  min-width: 0;
+  border-radius: 1rem;
+  border: 1px solid rgba(6, 44, 30, 0.1);
+  background: #f7faf8;
+  padding: 0.875rem 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.phone-input-shell:focus-within,
+.phone-input-shell.PhoneInput--focus {
+  border-color: #0d4a33;
+  box-shadow: 0 0 0 2px rgba(13, 74, 51, 0.1);
+}
+
+.phone-input-shell .PhoneInputCountry {
+  flex-shrink: 0;
+  margin-right: 0.125rem;
+}
+
+.phone-input-shell .PhoneInputCountryIcon {
+  width: 1.4rem;
+  height: 1rem;
+  overflow: hidden;
+  border-radius: 0.2rem;
+  box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.08);
+}
+
+.phone-input-shell .PhoneInputCountrySelect {
+  cursor: pointer;
+}
+
+.phone-input-shell .PhoneInputCountrySelectArrow {
+  opacity: 0.65;
+}
+
+.phone-input-shell .PhoneInputInput {
+  min-width: 0;
+  width: 100%;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: #1e293b;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.phone-input-shell .PhoneInputInput::placeholder {
+  color: #94a3b8;
+}
+
+@media (max-width: 640px) {
+  .phone-input-shell {
+    padding: 0.85rem 0.9rem;
+    gap: 0.6rem;
+  }
+
+  .phone-input-shell .PhoneInputInput,
+  .phone-input-shell .PhoneInputCountrySelect {
+    font-size: 16px; /* prevents iPhone zoom */
+  }
+}

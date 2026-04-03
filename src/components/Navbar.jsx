@@ -27,14 +27,14 @@ const Navbar = ({ companyName }) => {
             <a href="#" className="group flex min-w-0 items-center gap-3">
               <img
                 src={logo}
-                alt="PK Synergy Solution logo"
+                alt="PK Synergy Solutions logo"
                 className="h-10 w-10 shrink-0 rounded-full object-cover bg-white shadow-md ring-1 ring-slate-900/5 sm:h-11 sm:w-11"
               />
 
               <div className="min-w-0">
                 {/* FIXED: Scales text down for tiny mobile screens so it doesn't truncate */}
                 <h1 className="truncate font-['Outfit'] text-[15px] tracking-tight text-slate-900 min-[390px]:text-base sm:text-xl">
-                  PK Synergy <span className="text-brand">Solution</span>
+                  PK Synergy <span className="text-brand">Solutions</span>
                 </h1>
               </div>
             </a>

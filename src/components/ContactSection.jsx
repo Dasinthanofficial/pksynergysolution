@@ -41,9 +41,8 @@ const ContactSection = ({ companyName }) => {
               </h2>
 
               <p className="mt-6 max-w-2xl text-base leading-8 text-slate-600 sm:text-lg">
-                Reach out to us to discuss how we can elevate your agricultural and
-                estate management operations. Our team is ready to provide tailored
-                solutions for your unique needs.
+                Reach out to us to discuss how we can elevate your need . Our team is ready to provide customized
+                Solutionss for your unique needs.
               </p>
             </div>
 

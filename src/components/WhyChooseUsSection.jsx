@@ -4,7 +4,7 @@ import Container from "./Container";
 
 const highlights = [
   "Tailored strategies for each estate",
-  "Advanced technologies for productivity",
+  "Integration for Higher Productivity",
   "Ecological stewardship",
   "Long-term value creation",
 ];
@@ -75,8 +75,7 @@ const WhyChooseSection = ({ text }) => {
 
             <div className="mt-8 rounded-[1.5rem] bg-gradient-to-r from-brand to-brand-dark p-6 text-white shadow-lg">
               <p className="text-sm leading-7 text-white/85 sm:text-base">
-                We do not just manage land — we cultivate excellence through
-                precision, care, and innovation.
+                We cultivate your satisfaction.
               </p>
             </div>
           </motion.div>

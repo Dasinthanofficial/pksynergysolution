@@ -41,7 +41,7 @@ const ServicesSection = ({ services }) => {
           </h2>
 
           <p className="mt-6 max-w-3xl text-base leading-8 text-white/70 sm:text-lg">
-            A refined service framework designed to optimize agricultural
+            A refined service framework designed to optimize
             operations with strategy, technology, sustainability, and oversight.
           </p>
         </motion.div>

@@ -1,8 +1,8 @@
 export const companyData = {
-  companyName: "PK Synergy Solution",
+  companyName: "PK Synergy Solutions",
   registrationNo: "PV 86639",
   executiveSummary:
-    "PK Synergy Solutions is a forward-thinking firm at the intersection of agriculture, construction, and estate management. We are dedicated to modernizing the farming industry by bridging the gap between time-honored expertise and cutting-edge technology to ensure peak productivity and lasting sustainability.",
+    "PK Synergy Solutionss is a forward-thinking firm at the intersection of construction, and estate management. We are dedicated to modernizing the farming industry by bridging the gap between time-honored expertise and cutting-edge technology to ensure peak productivity and lasting sustainability.",
   vision:
     "Transform agriculture through cutting-edge technology and sustainable management, setting new industry standards for growth and excellence.",
   mission:
@@ -11,7 +11,7 @@ export const companyData = {
     {
       title: "Innovation",
       description:
-        "We prioritize the integration of the latest agricultural technologies to stay ahead of industry trends.",
+        "We prioritize the integration of the latest agricultural and construction technologies to stay ahead of industry trends.",
     },
     {
       title: "Sustainability",
@@ -26,7 +26,7 @@ export const companyData = {
     {
       title: "Client Focus",
       description:
-        "We provide bespoke management solutions that address the specific needs of every estate we manage.",
+        "We provide bespoke management Solutionss that address the specific needs of every estate and construction we manage lands or construct buildings.",
     },
   ],
   services: [
@@ -52,5 +52,5 @@ export const companyData = {
     },
   ],
   whyChooseUs:
-    "At PK Synergy Solution, we believe the human mind is the greatest asset, and when paired with the right technology, the potential for growth is limitless. Our unique approach ensures that we don't just manage land; we cultivate excellence through precision, care, and innovation.",
+    "At PK Synergy Solutions, we believe the human mind is the greatest asset, and when paired with the right technology, the potential for growth is limitless. Our unique approach ensures that we don't just manage land; we cultivate excellence through precision, care, and innovation.",
 };

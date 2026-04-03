@@ -28,13 +28,13 @@ const CoreValuesSection = ({ values }) => {
                         </span>
 
                         <h2 className="mb-6 text-4xl font-bold leading-[1.1] tracking-tight text-slate-950 sm:text-5xl lg:text-6xl">
-                            The Principles Behind Every Decision
+                           Every Principle Behind Every Decision
                         </h2>
 
                         <p className="mb-8 text-base leading-relaxed text-slate-600 sm:text-lg">
-                            These values define how PK Synergy Solution approaches management,
+                            These values define how PK Synergy Solutions approaches management,
                             partnerships, and long-term growth. We pride ourselves on providing
-                            the best strategies tailored for modern agriculture.
+                            the best strategies customized for each client's unique requirements in modern technology.
                         </p>
 
                     </motion.div>

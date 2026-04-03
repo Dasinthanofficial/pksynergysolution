@@ -12,7 +12,7 @@ const Footer = ({ companyName }) => {
           {/* Brand */}
           <div>
             <p className="text-xs font-['Outfit'] uppercase tracking-[0.28em] text-white/35">
-              PK Synergy Solution
+              PK Synergy Solutions
             </p>
 
             <h3 className="mt-4 max-w-xl text-3xl font-semibold leading-tight tracking-[-0.04em] text-white sm:text-4xl">

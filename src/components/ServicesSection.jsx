@@ -35,7 +35,7 @@ const pillars = [
 const ServicesSection = () => {
   return (
     <section id="services" className="relative overflow-hidden py-20 sm:py-28">
-      {/* Background matching the dark theme */}
+      {/* Background */}
       <div className="absolute inset-0 -z-10 bg-[#04281b]" />
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/20 via-transparent to-black/20" />
       <div className="absolute inset-0 -z-10 opacity-20 [background:radial-gradient(circle_at_top_left,rgba(213,243,111,0.2),transparent_35%)]" />
@@ -54,10 +54,9 @@ const ServicesSection = () => {
           </span>
 
           <h2 className="max-w-4xl text-4xl font-semibold leading-[0.95] tracking-[-0.05em] text-white sm:text-5xl lg:text-6xl">
-            PK Synergy Solution stands on <br /> Two strong pillars
+            PK Synergy Solutions stands on <br /> two strong pillars
           </h2>
-
-                 </motion.div>
+        </motion.div>
 
         {/* 2-Card Grid */}
         <div className="grid gap-6 lg:grid-cols-2">
@@ -73,14 +72,16 @@ const ServicesSection = () => {
                 transition={{ duration: 0.55, delay: index * 0.15 }}
                 className="group flex flex-col rounded-[2.5rem] border border-[#114d36] bg-[#0a3625] p-8 text-white shadow-2xl transition-all duration-300 hover:-translate-y-1 hover:border-lime-900/50 hover:bg-[#0c3e2a] sm:p-10"
               >
-                {/* Icon Container matched to the image */}
-                <div className="mb-8 inline-flex items-center justify-center rounded-2xl border border-white/5 bg-[#124b33] p-4 text-lime-400 shadow-inner">
-                  <Icon size={28} strokeWidth={1.5} />
-                </div>
+                {/* Icon + Heading */}
+                <div className="mb-6 flex items-start gap-4">
+                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-white/5 bg-[#124b33] text-lime-400 shadow-inner">
+                    <Icon size={28} strokeWidth={1.5} />
+                  </div>
 
-                <h3 className="mb-4 text-2xl font-semibold tracking-tight text-white sm:text-3xl">
-                  {pillar.title}
-                </h3>
+                  <h3 className="min-w-0 flex-1 text-2xl font-semibold tracking-tight text-white sm:text-3xl">
+                    {pillar.title}
+                  </h3>
+                </div>
 
                 <p className="mb-8 text-base leading-relaxed text-white/70">
                   {pillar.description}

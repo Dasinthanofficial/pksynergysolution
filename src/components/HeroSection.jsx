@@ -3,7 +3,7 @@ import { ArrowRight, MapPin, Cpu } from "lucide-react";
 import Container from "./Container";
 import heroImage from "../assets/hero-farm.jpeg";
 
-const HeroSection = ({ data }) => {
+const HeroSection = ({ data, onOpenInquiry }) =>  {
   return (
     <section className="relative isolate min-h-[100svh] overflow-hidden pt-28 sm:pt-32">
       <div

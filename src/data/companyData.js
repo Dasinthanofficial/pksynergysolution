@@ -2,7 +2,7 @@ export const companyData = {
   companyName: "PK Synergy Solutions",
   registrationNo: "PV 86639",
   executiveSummary:
-    "PK Synergy Solutionss is a forward-thinking firm at the intersection of construction, and estate management. We are dedicated to modernizing the farming industry by bridging the gap between time-honored expertise and cutting-edge technology to ensure peak productivity and lasting sustainability.",
+    "Manage your property in Northern Srilanka from anywhere in the world. Distance shouldn't mean a lack of control. Whether you are in London, Toronto, or Colombo, PK Synergy Solutions brings your Northern Sri Lanka investments to your smartphone.",
   vision:
     "Transform agriculture through cutting-edge technology and sustainable management, setting new industry standards for growth and excellence.",
   mission:

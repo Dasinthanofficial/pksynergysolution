@@ -33,11 +33,11 @@ const HeroSection = ({ data }) => {
           >
             {/* Added drop-shadow-lg to make heading pop over background */}
             <h1 className="text-5xl font-semibold leading-[0.92] tracking-[-0.07em] text-white drop-shadow-lg sm:text-7xl lg:text-[6.25rem]">
-              Precision.
+              Control.
               <br />
-              Growth.
+             Security.
               <br />
-              <span className="italic text-lime-300">Sustainability.</span>
+              <span className="italic text-lime-300">Peace of Mind.</span>
             </h1>
 
             {/* FIXED: Made text fully white and added a drop-shadow for mobile readability */}
@@ -50,17 +50,11 @@ const HeroSection = ({ data }) => {
                 href="#services"
                 className="inline-flex items-center gap-2 rounded-2xl bg-brand px-6 py-3.5 text-sm font-semibold text-white shadow-[0_20px_40px_rgba(13,74,51,0.28)] transition duration-300 hover:-translate-y-0.5 hover:bg-brand-dark"
               >
-                Explore Services
+                get free property health check
                 <ArrowRight size={18} />
               </a>
 
-              <a
-                href="#about"
-                className="inline-flex items-center rounded-2xl border border-white/20 bg-white/10 px-6 py-3.5 text-sm font-semibold text-white backdrop-blur transition duration-300 hover:bg-white/15"
-              >
-                View Profile
-              </a>
-            </div>
+                         </div>
 
             <motion.div
               initial={{ opacity: 0, y: 18 }}

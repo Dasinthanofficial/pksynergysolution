@@ -6,7 +6,7 @@ export const companyData = {
   vision:
     "To be the premier professional property management firm in Northern Sri Lanka, transforming how the global diaspora connects with, protects, and grows their heritage through world-class technology and local integrity.",
   mission:
-    "To deliver unique, tailored strategies for each estate, leveraging advanced technologies to enhance productivity, foster ecological stewardship, and maximize long-term value.",
+    "Our mission is to provide professional proximity management services for properties in Jaffna, Kilinochchi, Mannar, and Vavuniya, offering both local and overseas owners absolute peace of mind. We achieve this by integrating advanced cloud technology, transparent financial reporting, and sustainable agricultural practices and construction into a seamless experience that puts every property at the fingertips of its owner.",
   coreValues: [
     {
       title: "Innovation",

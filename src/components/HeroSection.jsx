@@ -3,13 +3,18 @@ import { ArrowRight, MapPin, Cpu } from "lucide-react";
 import Container from "./Container";
 import heroImage from "../assets/hero-farm.jpeg";
 
-const HeroSection = ({ data, onOpenInquiry }) =>  {
+const HeroSection = ({ data, onOpenInquiry }) => {
   return (
     <section className="relative isolate min-h-[100svh] overflow-hidden pt-28 sm:pt-32">
-      <div
-        className="absolute inset-0 -z-20 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroImage})` }}
-      />
+      {/* Background image with reduced right-side visibility */}
+      <div className="absolute inset-0 -z-20 overflow-hidden">
+        <img
+          src={heroImage}
+          alt=""
+          aria-hidden="true"
+          className="h-full w-full object-cover object-[35%_center] scale-[1.06] sm:object-[38%_center] lg:object-[40%_center]"
+        />
+      </div>
 
       {/* readability overlays */}
       <div className="absolute inset-0 -z-10 bg-black/35 sm:bg-black/20" />
@@ -45,13 +50,14 @@ const HeroSection = ({ data, onOpenInquiry }) =>  {
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
-              <a
-                href="#contact"
+              <button
+                type="button"
+                onClick={onOpenInquiry}
                 className="inline-flex items-center gap-2 rounded-2xl bg-brand px-6 py-4 text-sm font-semibold text-white shadow-[0_20px_40px_rgba(13,74,51,0.28)] transition duration-300 hover:-translate-y-0.5 hover:bg-brand-dark"
               >
                 Get free property health check
                 <ArrowRight size={18} />
-              </a>
+              </button>
             </div>
 
             <motion.div

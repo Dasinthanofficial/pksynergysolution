@@ -68,10 +68,9 @@ const Footer = ({ companyName }) => {
             </h4>
 
             <ul className="mt-5 space-y-3 text-sm text-white/65">
-              <li>Estate Management</li>
-              <li>Tech Integration</li>
-              <li>Sustainable Cultivation</li>
-              <li>Project Consultancy</li>
+              <li>Agriculture & Estate Management</li>
+              <li>Construction & Infrastructure Development</li>
+             
             </ul>
           </div>
         </div>

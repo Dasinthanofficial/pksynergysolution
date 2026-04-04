@@ -3,69 +3,83 @@ import { Eye, Goal } from "lucide-react";
 import Container from "./Container";
 import SectionTitle from "./SectionTitle";
 
+const highlightPhrase = (text, phrase) => {
+  if (!text || !phrase || !text.includes(phrase)) return text;
+
+  const parts = text.split(phrase);
+
+  return parts.map((part, index) => (
+    <span key={index}>
+      {part}
+      {index < parts.length - 1 && (
+        <span className="rounded-md bg-brand/10 px-2 py-1 font-semibold text-brand shadow-sm">
+          {phrase}
+        </span>
+      )}
+    </span>
+  ));
+};
+
 const AboutSection = ({ data }) => {
   return (
-    <section id="about" className="py-20 sm:py-28 relative overflow-hidden">
+    <section id="about" className="relative overflow-hidden py-20 sm:py-28">
       <Container>
-        <SectionTitle
-          eyebrow="The Foundation"
-          title="Vision & Mission"
-        />
+        <SectionTitle eyebrow="The Foundation" title="Vision & Mission" />
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.7 }}
-          className="relative mx-auto w-full overflow-hidden rounded-[2.5rem] bg-white shadow-[0_20px_60px_rgba(13,74,51,0.08)] border border-emerald-900/5"
+          className="relative isolate mx-auto overflow-hidden rounded-[2.5rem] border border-emerald-900/5 bg-white shadow-[0_20px_60px_rgba(13,74,51,0.08)]"
         >
-          {/* Diagonal Split Background */}
-          <div 
-            className="absolute inset-0 z-0 bg-gradient-to-br from-brand to-[#062c1e] 
-                       [clip-path:polygon(0_0,100%_0,100%_48%,0_52%)] 
-                       md:[clip-path:polygon(0_0,62%_0,38%_100%,0_100%)]
-                       lg:[clip-path:polygon(0_0,58%_0,42%_100%,0_100%)]" 
+          <div className="absolute inset-0 -z-20 bg-white" />
+
+          <div
+            className="absolute inset-0 -z-10 bg-gradient-to-br from-brand via-brand to-[#062c1e]
+              [clip-path:polygon(0_0,100%_0,100%_44%,0_58%)]
+              md:[clip-path:polygon(0_0,55%_0,43%_100%,0_100%)]
+              lg:[clip-path:polygon(0_0,54%_0,46%_100%,0_100%)]"
           />
 
-          <div className="relative z-10 grid md:grid-cols-2 auto-rows-fr">
-            
-            {/* Left Column: Vision Section */}
-            <div className="flex flex-col p-8 sm:p-12 lg:p-16">
-              <div className="max-w-[18rem] sm:max-w-xs">
-                <h3 className="text-4xl sm:text-5xl font-extrabold uppercase tracking-tight text-white mb-6 leading-[1.05] drop-shadow-md">
-                  Our<br />Vision
+          <div className="relative z-10 grid min-h-[38rem] md:min-h-[34rem] md:grid-cols-2">
+            {/* Vision */}
+            <div className="flex flex-col justify-center p-8 sm:p-12 lg:p-16">
+              <div className="max-w-[22rem]">
+                <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-full border border-white/15 bg-white/10 text-white shadow-xl backdrop-blur-sm">
+                  <Eye size={30} strokeWidth={1.6} />
+                </div>
+
+                <h3 className="text-4xl font-extrabold uppercase leading-[1.02] tracking-tight text-white drop-shadow-md sm:text-5xl">
+                  Our
+                  <br />
+                  Vision
                 </h3>
-                <p className="text-white/90 text-sm sm:text-base leading-relaxed">
+
+                <p className="mt-6 text-sm leading-8 text-white/88 sm:text-base">
                   {data.vision}
                 </p>
               </div>
-              
-              <div className="mt-12 sm:mt-16 flex justify-start pl-2 sm:pl-8">
-                <div className="rounded-full bg-white/10 p-5 backdrop-blur-sm shadow-xl border border-white/10">
-                  <Eye size={48} strokeWidth={1.5} className="text-white" />
-                </div>
-              </div>
             </div>
 
-            {/* Right Column: Mission Section */}
-            <div className="flex flex-col p-8 sm:p-12 lg:p-16">
-              <div className="flex justify-end pr-2 sm:pr-8 md:pr-0">
-                <div className="rounded-full bg-brand/5 p-5 shadow-lg border border-brand/10">
-                  {/* Fixed Icon Here */}
-                  <Goal size={48} strokeWidth={1.5} className="text-brand" />
+            {/* Mission */}
+            <div className="flex flex-col justify-center p-8 sm:p-12 lg:p-16">
+              <div className="max-w-[22rem] md:ml-auto">
+                <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-full border border-brand/10 bg-brand-soft text-brand shadow-lg">
+                  <Goal size={30} strokeWidth={1.6} />
                 </div>
-              </div>
 
-              <div className="mt-12 sm:mt-16 max-w-[18rem] sm:max-w-xs self-start md:ml-auto lg:ml-0 md:pl-8 lg:pl-16">
-                <h3 className="text-4xl sm:text-5xl font-extrabold uppercase tracking-tight text-brand mb-6 leading-[1.05] drop-shadow-sm">
-                  Our<br />Mission
+                <h3 className="text-4xl font-extrabold uppercase leading-[1.02] tracking-tight text-brand drop-shadow-sm sm:text-5xl">
+                  Our
+                  <br />
+                  Mission
                 </h3>
-                <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-                  {data.mission}
+
+                <p className="mt-6 text-sm leading-8 text-slate-600 sm:text-base">
+                  {highlightPhrase(data.mission, "at the fingertips")}
                 </p>
               </div>
             </div>
-
           </div>
         </motion.div>
       </Container>

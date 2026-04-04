@@ -8,7 +8,9 @@ const InquiryModal = ({ open, onClose, companyName }) => {
     if (!open) return;
 
     const handleKeyDown = (event) => {
-      if (event.key === "Escape") onClose();
+      if (event.key === "Escape") {
+        onClose();
+      }
     };
 
     const previousOverflow = document.body.style.overflow;

@@ -16,10 +16,12 @@ function App() {
   return (
     <div className="min-h-screen overflow-x-hidden">
       <Navbar companyName={companyData.companyName} />
+
       <HeroSection
         data={companyData}
         onOpenInquiry={() => setIsInquiryOpen(true)}
       />
+
       <AboutSection data={companyData} />
       <ServicesSection services={companyData.services} />
       <CoreValuesSection values={companyData.coreValues} />

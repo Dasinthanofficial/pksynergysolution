@@ -7,7 +7,7 @@ const highlights = [
   "Integration for Higher Productivity",
   "Ecological stewardship",
   "Long-term value creation",
-  "To be the premier professional property management firm in Northern Sri Lanka, transforming how the global diaspora connects with, protects, and grows their heritage through world-class technology and local integrity."
+  
 ];
 
 const WhyChooseSection = ({ text }) => {
@@ -55,6 +55,7 @@ const WhyChooseSection = ({ text }) => {
             <h3 className="text-2xl font-semibold tracking-tight text-slate-950 sm:text-3xl">
               The PK Synergy Advantage
             </h3>
+           
 
             <div className="mt-8 grid gap-4">
               {highlights.map((item, index) => (

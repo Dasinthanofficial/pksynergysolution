@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Eye, Goal } from "lucide-react"; // Changed 'Target' to 'Goal'
+import { Eye, Goal } from "lucide-react";
 import Container from "./Container";
 import SectionTitle from "./SectionTitle";
 

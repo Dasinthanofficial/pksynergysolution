@@ -7,6 +7,7 @@ const highlights = [
   "Integration for Higher Productivity",
   "Ecological stewardship",
   "Long-term value creation",
+  "To be the premier professional property management firm in Northern Sri Lanka, transforming how the global diaspora connects with, protects, and grows their heritage through world-class technology and local integrity."
 ];
 
 const WhyChooseSection = ({ text }) => {

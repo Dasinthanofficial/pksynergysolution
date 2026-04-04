@@ -4,7 +4,7 @@ export const companyData = {
   executiveSummary:
     "Manage your property in Northern Srilanka from anywhere in the world. Distance shouldn't mean a lack of control. Whether you are in London, Toronto, or Colombo, PK Synergy Solutions brings your Northern Sri Lanka investments to your smartphone.",
   vision:
-    "Transform agriculture through cutting-edge technology and sustainable management, setting new industry standards for growth and excellence.",
+    "To be the premier professional property management firm in Northern Sri Lanka, transforming how the global diaspora connects with, protects, and grows their heritage through world-class technology and local integrity.",
   mission:
     "To deliver unique, tailored strategies for each estate, leveraging advanced technologies to enhance productivity, foster ecological stewardship, and maximize long-term value.",
   coreValues: [

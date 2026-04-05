@@ -59,7 +59,7 @@ const ContactSection = ({ companyName }) => {
                   <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-soft text-brand">
                     <MapPin size={16} />
                   </span>
-                  <span className="pt-1 leading-relaxed">
+                  <span className="pt-1 leading-relaxed font-medium ">
                     39, Vivekananthanagar west
                   </span>
                 </div>

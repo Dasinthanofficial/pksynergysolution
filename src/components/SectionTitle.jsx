@@ -6,24 +6,36 @@ const fadeUp = {
 };
 
 const SectionTitle = ({ eyebrow, title, description, align = "left" }) => {
+  const centered = align === "center";
+
   return (
     <motion.div
       variants={fadeUp}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.25 }}
-      className={`mb-12 ${align === "center" ? "text-center" : ""}`}
+      className={`mb-10 sm:mb-12 ${centered ? "text-center" : ""}`}
     >
       {eyebrow && (
-        <span className="mb-4 inline-flex rounded-full border border-emerald-900/10 bg-white/70 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-brand shadow-sm backdrop-blur">
+        <span className="mb-4 inline-flex rounded-full border border-emerald-900/10 bg-white/70 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-brand shadow-sm backdrop-blur sm:text-xs">
           {eyebrow}
         </span>
       )}
-      <h2 className="max-w-4xl text-4xl font-semibold tracking-tight text-slate-950 sm:text-5xl lg:text-6xl">
+
+      <h2
+        className={`text-[clamp(2rem,7vw,3.75rem)] font-semibold leading-[0.95] tracking-[-0.04em] text-slate-950 ${
+          centered ? "mx-auto max-w-4xl" : "max-w-4xl"
+        }`}
+      >
         {title}
       </h2>
+
       {description && (
-        <p className="mt-5 max-w-3xl text-base leading-8 text-slate-600 sm:text-lg">
+        <p
+          className={`mt-4 text-sm leading-7 text-slate-600 sm:mt-5 sm:text-base sm:leading-8 ${
+            centered ? "mx-auto max-w-3xl" : "max-w-3xl"
+          }`}
+        >
           {description}
         </p>
       )}

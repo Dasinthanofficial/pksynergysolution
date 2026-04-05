@@ -11,30 +11,29 @@ const navLinks = [
   { label: "Values", href: "#values" },
 ];
 
-const Navbar = ({ companyName }) => {
+const Navbar = ({ companyName = "PK Synergy Solutions" }) => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="fixed left-0 right-0 top-0 z-[100] pt-3">
+    <div className="fixed left-0 right-0 top-0 z-[100] pt-2 sm:pt-3">
       <Container>
         <motion.header
           initial={{ opacity: 0, y: -18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.65, ease: "easeOut" }}
-          className="rounded-[1.8rem] border border-white/60 bg-white/80 px-5 py-2 shadow-[0_20px_50px_rgba(12,20,16,0.08)] backdrop-blur-xl"
+          className="rounded-[1.35rem] border border-white/60 bg-white/80 px-3 py-2.5 shadow-[0_20px_50px_rgba(12,20,16,0.08)] backdrop-blur-xl sm:rounded-[1.8rem] sm:px-5"
         >
-          <div className="flex items-center justify-between gap-4">
+          <div className="flex items-center justify-between gap-3 sm:gap-4">
             <a href="#" className="group flex min-w-0 items-center gap-3">
               <img
                 src={logo}
                 alt="PK Synergy Solutions logo"
-                className="h-10 w-10 shrink-0 rounded-full object-cover bg-white shadow-md ring-1 ring-slate-900/5 sm:h-11 sm:w-11"
+                className="h-10 w-10 shrink-0 rounded-full bg-white object-cover shadow-md ring-1 ring-slate-900/5 sm:h-11 sm:w-11"
               />
 
-              <div className="min-w-0">
-                {/* FIXED: Scales text down for tiny mobile screens so it doesn't truncate */}
-                <h1 className="truncate font-['Outfit'] text-[15px] tracking-tight text-slate-900 min-[390px]:text-base sm:text-xl">
-                  PK Synergy <span className="text-brand">Solutions</span>
+              <div className="min-w-0 max-w-[11rem] min-[390px]:max-w-[14rem] sm:max-w-none">
+                <h1 className="truncate font-['Outfit'] text-sm tracking-tight text-slate-900 min-[390px]:text-[15px] sm:text-base lg:text-xl">
+                  {companyName}
                 </h1>
               </div>
             </a>
@@ -59,9 +58,11 @@ const Navbar = ({ companyName }) => {
             </nav>
 
             <button
+              type="button"
               onClick={() => setOpen(!open)}
-              className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-emerald-900/10 bg-white text-brand shadow-sm transition hover:bg-emerald-50 lg:hidden"
+              className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-emerald-900/10 bg-white text-brand shadow-sm transition hover:bg-emerald-50 lg:hidden"
               aria-label="Toggle menu"
+              aria-expanded={open}
             >
               {open ? <X size={18} /> : <Menu size={18} />}
             </button>
@@ -89,7 +90,7 @@ const Navbar = ({ companyName }) => {
                 <a
                   href="#contact"
                   onClick={() => setOpen(false)}
-                  className="mt-2 inline-flex w-fit rounded-2xl bg-brand px-5 py-2.5 text-sm font-semibold text-white shadow-md"
+                  className="mt-2 inline-flex w-full items-center justify-center rounded-2xl bg-brand px-5 py-3 text-sm font-semibold text-white shadow-md"
                 >
                   Connect
                 </a>

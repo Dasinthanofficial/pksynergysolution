@@ -1,17 +1,46 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;800&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 110px;
 }
 
 body {
+  margin: 0;
   font-family: Inter, ui-sans-serif, system-ui, sans-serif;
   background:
     radial-gradient(circle at top left, rgba(201, 255, 72, 0.12), transparent 28%),
     radial-gradient(circle at right center, rgba(13, 74, 51, 0.08), transparent 24%),
     #f6f7f3;
   color: #0b1410;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+  overflow-x: clip;
+}
+
+img,
+svg,
+video,
+canvas {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
 }
 
 ::selection {
@@ -27,13 +56,13 @@ body {
   --color-muted: #607065;
 }
 
-
 .phone-input-shell {
   display: flex;
   align-items: center;
   gap: 0.75rem;
   width: 100%;
   min-width: 0;
+  min-height: 56px;
   border-radius: 1rem;
   border: 1px solid rgba(6, 44, 30, 0.1);
   background: #f7faf8;
@@ -62,6 +91,7 @@ body {
 
 .phone-input-shell .PhoneInputCountrySelect {
   cursor: pointer;
+  min-width: 0;
 }
 
 .phone-input-shell .PhoneInputCountrySelectArrow {
@@ -91,22 +121,6 @@ body {
 
   .phone-input-shell .PhoneInputInput,
   .phone-input-shell .PhoneInputCountrySelect {
-    font-size: 16px; /* prevents iPhone zoom */
+    font-size: 16px;
   }
-}
-
-
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 110px;
-}
-
-body {
-  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
-  background:
-    radial-gradient(circle at top left, rgba(201, 255, 72, 0.12), transparent 28%),
-    radial-gradient(circle at right center, rgba(13, 74, 51, 0.08), transparent 24%),
-    #f6f7f3;
-  color: #0b1410;
-  overflow-x: hidden;
 }

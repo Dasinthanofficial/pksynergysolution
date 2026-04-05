@@ -141,10 +141,7 @@ const ServicesSection = () => {
                     Focus Areas
                   </span>
 
-                  <p className="mx-auto mt-4 max-w-[18rem] text-xs leading-6 text-white/60 sm:text-sm">
-                    Serving key regions across Northern Sri Lanka with on-ground
-                    expertise and digital visibility.
-                  </p>
+                 
 
                   <div className="relative mx-auto mt-6 w-full max-w-[170px] sm:max-w-[210px] lg:max-w-[230px] xl:max-w-[220px] 2xl:max-w-[250px]">
                     <div className="absolute inset-5 rounded-full bg-lime-300/12 blur-3xl" />

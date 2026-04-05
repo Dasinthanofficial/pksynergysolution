@@ -132,19 +132,18 @@ const ServicesSection = () => {
               transition={{ duration: 0.65, delay: 0.12 }}
               className="order-2 flex min-w-0 items-center justify-center xl:order-none"
             >
-              <div className="relative isolate flex h-full w-full flex-col items-center justify-center overflow-hidden rounded-[2rem] border border-lime-300/10 bg-[linear-gradient(180deg,rgba(8,54,36,0.4),rgba(7,47,32,0.16))] px-5 py-8 text-center shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] sm:px-6 sm:py-10 xl:rounded-[2.5rem]">
-                <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(214,243,109,0.1),transparent_34%)]" />
-                <div className="pointer-events-none absolute left-1/2 top-1/2 h-56 w-56 -translate-x-1/2 -translate-y-1/2 rounded-full bg-lime-300/8 blur-3xl" />
-
+              <div className="relative flex h-full w-full flex-col items-center justify-center px-5 py-8 text-center sm:px-6 sm:py-10">
                 <div className="relative z-10">
                   <span className="inline-flex rounded-full border border-lime-300/20 bg-lime-300/5 px-5 py-2 text-[11px] font-semibold uppercase tracking-[0.35em] text-lime-300 shadow-sm backdrop-blur sm:text-xs">
                     Focus Areas
                   </span>
 
-                 
+                  <p className="mx-auto mt-4 max-w-[18rem] text-xs leading-6 text-white/60 sm:text-sm">
+                    Serving key regions across Northern Sri Lanka with on-ground
+                    expertise and digital visibility.
+                  </p>
 
                   <div className="relative mx-auto mt-6 w-full max-w-[170px] sm:max-w-[210px] lg:max-w-[230px] xl:max-w-[220px] 2xl:max-w-[250px]">
-                    <div className="absolute inset-5 rounded-full bg-lime-300/12 blur-3xl" />
                     <img
                       src={sriLankaMap}
                       alt="Map highlighting Northern Sri Lanka focus areas"

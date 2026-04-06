@@ -1,3 +1,4 @@
+// FILE: src/components/HeroSection.jsx
 import { motion } from "framer-motion";
 import { ArrowRight, MapPin, Cpu } from "lucide-react";
 import Container from "./Container";
@@ -46,7 +47,7 @@ const HeroSection = ({ data, onOpenInquiry }) => {
               {data.executiveSummary}
             </p>
 
-            <div className="mt-8 flex flex-wrap gap-4">
+            <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
               <button
                 type="button"
                 onClick={onOpenInquiry}
@@ -55,6 +56,57 @@ const HeroSection = ({ data, onOpenInquiry }) => {
                 Get free property health check
                 <ArrowRight size={18} />
               </button>
+
+              {/* Social Media Icons */}
+              <div className="flex items-center gap-3">
+                <a
+                  href="https://youtube.com/@pksynergy?si=cfHd21408uNYL-bL"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit our YouTube channel"
+                  className="group flex h-14 w-14 items-center justify-center rounded-2xl border border-white/15 bg-white/10 text-white shadow-[0_20px_40px_rgba(0,0,0,0.2)] backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:bg-white hover:text-brand"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="transition-transform duration-300 group-hover:scale-110"
+                  >
+                    <path d="M2.5 7.1c.1-1.8 1.5-3.2 3.3-3.3C9.4 3.5 14.6 3.5 18.2 3.8c1.8.1 3.2 1.5 3.3 3.3.3 3.3.3 6.6 0 9.8-.1 1.8-1.5 3.2-3.3 3.3-3.6.3-8.8.3-12.4 0-1.8-.1-3.2-1.5-3.3-3.3-.3-3.2-.3-6.5 0-9.8zm7.5 7.9 5-3-5-3v6z" />
+                  </svg>
+                </a>
+
+                <a
+                  href="https://www.instagram.com/pksynergy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit our Instagram profile"
+                  className="group flex h-14 w-14 items-center justify-center rounded-2xl border border-white/15 bg-white/10 text-white shadow-[0_20px_40px_rgba(0,0,0,0.2)] backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:bg-white hover:text-brand"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="transition-transform duration-300 group-hover:scale-110"
+                  >
+                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                  </svg>
+                </a>
+              </div>
             </div>
 
             <motion.div
@@ -86,5 +138,3 @@ const HeroSection = ({ data, onOpenInquiry }) => {
 };
 
 export default HeroSection;
-
-

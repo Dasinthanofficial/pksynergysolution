@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, MapPin, Cpu } from "lucide-react";
 import Container from "./Container";
-import heroImage from "../assets/hero-farm.jpeg";
+import heroImage from "../assets/hero-farm.png";
 
 const HeroSection = ({ data, onOpenInquiry }) => {
   return (
@@ -31,7 +31,7 @@ const HeroSection = ({ data, onOpenInquiry }) => {
             className="w-full max-w-3xl lg:max-w-[46rem]"
           >
             <span className="mb-5 inline-flex rounded-full border border-white/15 bg-white/10 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.24em] text-lime-300 backdrop-blur min-[390px]:text-[11px]">
-              Remote Estate Visibility
+              Remote Estate Management
             </span>
 
             <h1 className="max-w-[10ch] text-[clamp(2.8rem,12vw,6.4rem)] font-semibold leading-[0.92] tracking-[-0.07em] text-white drop-shadow-[0_10px_30px_rgba(0,0,0,0.4)]">
@@ -86,3 +86,5 @@ const HeroSection = ({ data, onOpenInquiry }) => {
 };
 
 export default HeroSection;
+
+

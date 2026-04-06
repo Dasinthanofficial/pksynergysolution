@@ -1,12 +1,21 @@
 import { motion } from "framer-motion";
 import { CheckCircle2, Sparkles } from "lucide-react";
 import Container from "./Container";
+import sriLankaMap from "../assets/sri-lanka-map.png";
 
 const highlights = [
   "Tailored strategies for each estate",
   "Integration for Higher Productivity",
   "Ecological stewardship",
   "Long-term value creation",
+];
+
+const focusAreas = [
+  "Jaffna",
+  "Kilinochchi",
+  "Mullaitivu",
+  "Mannar",
+  "Vavuniya",
 ];
 
 const WhyChooseSection = ({ text }) => {
@@ -36,6 +45,37 @@ const WhyChooseSection = ({ text }) => {
             <p className="mt-5 max-w-2xl text-sm leading-7 text-slate-600 sm:mt-6 sm:text-base sm:leading-8 lg:text-lg">
               {text}
             </p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="mt-10 rounded-[1.5rem] border border-emerald-900/10 bg-white/80 p-6 shadow-[0_20px_60px_rgba(12,20,16,0.06)] backdrop-blur sm:rounded-[2rem] sm:p-8"
+            >
+              <span className="inline-flex rounded-full border border-emerald-900/10 bg-brand-soft px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-brand sm:text-xs">
+                Focus Areas
+              </span>
+
+              <div className="mt-6 flex justify-center lg:justify-start">
+                <img
+                  src={sriLankaMap}
+                  alt="Map highlighting Northern Sri Lanka focus areas"
+                  className="h-auto w-full max-h-[260px] object-contain sm:max-h-[320px]"
+                />
+              </div>
+
+              <div className="mt-6 flex flex-wrap gap-2.5">
+                {focusAreas.map((area) => (
+                  <span
+                    key={area}
+                    className="rounded-full border border-emerald-900/10 bg-brand-soft px-3 py-1.5 text-[11px] font-medium tracking-wide text-slate-700"
+                  >
+                    {area}
+                  </span>
+                ))}
+              </div>
+            </motion.div>
           </motion.div>
 
           <motion.div

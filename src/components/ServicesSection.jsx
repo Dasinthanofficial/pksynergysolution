@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { Sprout, Building2, CheckCircle2 } from "lucide-react";
 import Container from "./Container";
-import sriLankaMap from "../assets/sri-lanka-map.png";
 
 const pillars = [
   {
@@ -31,14 +30,6 @@ const pillars = [
       "Sustainable construction practices aligned with ecological stewardship",
     ],
   },
-];
-
-const focusAreas = [
-  "Jaffna",
-  "Kilinochchi",
-  "Mullaitivu",
-  "Mannar",
-  "Vavuniya",
 ];
 
 const ServiceCard = ({ pillar, index }) => {
@@ -93,7 +84,6 @@ const ServicesSection = () => {
       id="services"
       className="relative overflow-hidden py-16 sm:py-20 lg:py-28"
     >
-      {/* background */}
       <div className="absolute inset-0 -z-20 bg-[#04281b]" />
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/20 via-transparent to-black/20" />
       <div className="absolute inset-0 -z-10 opacity-30 [background:radial-gradient(circle_at_top_left,rgba(213,243,111,0.18),transparent_35%)]" />
@@ -101,7 +91,6 @@ const ServicesSection = () => {
 
       <Container>
         <div className="mx-auto max-w-[98rem]">
-          {/* header */}
           <motion.div
             initial={{ opacity: 0, y: 26 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -118,52 +107,10 @@ const ServicesSection = () => {
             </h2>
           </motion.div>
 
-          {/* layout */}
-          <div className="grid items-stretch gap-6 xl:grid-cols-[minmax(0,1fr)_290px_minmax(0,1fr)] xl:gap-8 2xl:grid-cols-[minmax(0,1fr)_320px_minmax(0,1fr)] 2xl:gap-10">
+          <div className="grid items-stretch gap-6 xl:grid-cols-2 xl:gap-8 2xl:gap-10">
             <div className="min-w-0">
               <ServiceCard pillar={pillars[0]} index={0} />
             </div>
-
-            {/* center focus panel */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.94 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.65, delay: 0.12 }}
-              className="order-2 flex min-w-0 items-center justify-center xl:order-none"
-            >
-              <div className="relative flex h-full w-full flex-col items-center justify-center px-5 py-8 text-center sm:px-6 sm:py-10">
-                <div className="relative z-10">
-                  <span className="inline-flex rounded-full border border-lime-300/20 bg-lime-300/5 px-5 py-2 text-[11px] font-semibold uppercase tracking-[0.35em] text-lime-300 shadow-sm backdrop-blur sm:text-xs">
-                    Focus Areas
-                  </span>
-
-                  <p className="mx-auto mt-4 max-w-[18rem] text-xs leading-6 text-white/60 sm:text-sm">
-                    Serving key regions across Northern Sri Lanka with on-ground
-                    expertise and digital visibility.
-                  </p>
-
-                  <div className="relative mx-auto mt-6 w-full max-w-[170px] sm:max-w-[210px] lg:max-w-[230px] xl:max-w-[220px] 2xl:max-w-[250px]">
-                    <img
-                      src={sriLankaMap}
-                      alt="Map highlighting Northern Sri Lanka focus areas"
-                      className="relative z-10 h-auto w-full object-contain drop-shadow-[0_22px_44px_rgba(0,0,0,0.35)]"
-                    />
-                  </div>
-
-                  <div className="mt-6 flex flex-wrap items-center justify-center gap-2.5">
-                    {focusAreas.map((area) => (
-                      <span
-                        key={area}
-                        className="rounded-full border border-white/8 bg-white/5 px-3 py-1.5 text-[11px] font-medium tracking-wide text-white/75 backdrop-blur"
-                      >
-                        {area}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </motion.div>
 
             <div className="min-w-0">
               <ServiceCard pillar={pillars[1]} index={1} />

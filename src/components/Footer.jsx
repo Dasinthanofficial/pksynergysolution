@@ -2,7 +2,7 @@
 import { ArrowUpRight } from "lucide-react";
 import Container from "./Container";
 
-const Footer = ({ companyName }) => {
+const Footer = ({ companyName, onNavigate }) => {
   return (
     <footer className="relative overflow-hidden bg-[#03140e] py-14 text-white sm:py-20">
       <div className="absolute left-0 top-0 -z-10 h-72 w-72 rounded-full bg-lime-300/8 blur-3xl" />
@@ -33,27 +33,62 @@ const Footer = ({ companyName }) => {
 
             <ul className="mt-5 space-y-3 text-sm text-white/65">
               <li>
-                <a href="#" className="transition hover:text-lime-300">
+                <a
+                  href="/"
+                  onClick={(event) => {
+                    event.preventDefault();
+                    onNavigate("/");
+                  }}
+                  className="transition hover:text-lime-300"
+                >
                   Home
                 </a>
               </li>
               <li>
-                <a href="#about" className="transition hover:text-lime-300">
+                <a
+                  href="/about"
+                  onClick={(event) => {
+                    event.preventDefault();
+                    onNavigate("/about");
+                  }}
+                  className="transition hover:text-lime-300"
+                >
                   About
                 </a>
               </li>
               <li>
-                <a href="#services" className="transition hover:text-lime-300">
+                <a
+                  href="/services"
+                  onClick={(event) => {
+                    event.preventDefault();
+                    onNavigate("/services");
+                  }}
+                  className="transition hover:text-lime-300"
+                >
                   Services
                 </a>
               </li>
               <li>
-                <a href="#values" className="transition hover:text-lime-300">
+                <a
+                  href="/values"
+                  onClick={(event) => {
+                    event.preventDefault();
+                    onNavigate("/values");
+                  }}
+                  className="transition hover:text-lime-300"
+                >
                   Values
                 </a>
               </li>
               <li>
-                <a href="#contact" className="transition hover:text-lime-300">
+                <a
+                  href="/contact"
+                  onClick={(event) => {
+                    event.preventDefault();
+                    onNavigate("/contact");
+                  }}
+                  className="transition hover:text-lime-300"
+                >
                   Contact
                 </a>
               </li>
@@ -132,7 +167,11 @@ const Footer = ({ companyName }) => {
 
             {/* Back to top Link */}
             <a
-              href="#"
+              href="/"
+              onClick={(event) => {
+                event.preventDefault();
+                onNavigate("/");
+              }}
               className="inline-flex items-center gap-2 font-medium text-lime-300 transition hover:text-white"
             >
               Back to top

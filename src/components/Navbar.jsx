@@ -5,14 +5,20 @@ import Container from "./Container";
 import logo from "../assets/logo.jpeg";
 
 const navLinks = [
-  { label: "Home", href: "#" },
-  { label: "About", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Values", href: "#values" },
+  { label: "Home", path: "/" },
+  { label: "About", path: "/about" },
+  { label: "Services", path: "/services" },
+  { label: "Values", path: "/values" },
 ];
 
-const Navbar = ({ companyName = "PK Synergy Solutions" }) => {
+const Navbar = ({ companyName = "PK Synergy Solutions", onNavigate }) => {
   const [open, setOpen] = useState(false);
+
+  const handleNavClick = (event, path) => {
+    event.preventDefault();
+    onNavigate(path);
+    setOpen(false);
+  };
 
   return (
     <div className="fixed left-0 right-0 top-0 z-[100] pt-2 sm:pt-3">
@@ -24,7 +30,14 @@ const Navbar = ({ companyName = "PK Synergy Solutions" }) => {
           className="rounded-[1.35rem] border border-white/60 bg-white/80 px-3 py-2.5 shadow-[0_20px_50px_rgba(12,20,16,0.08)] backdrop-blur-xl sm:rounded-[1.8rem] sm:px-5"
         >
           <div className="flex items-center justify-between gap-3 sm:gap-4">
-            <a href="#" className="group flex min-w-0 items-center gap-3">
+            <a
+              href="/"
+              onClick={(event) => {
+                event.preventDefault();
+                onNavigate("/");
+              }}
+              className="group flex min-w-0 items-center gap-3"
+            >
               <img
                 src={logo}
                 alt="PK Synergy Solutions logo"
@@ -42,7 +55,8 @@ const Navbar = ({ companyName = "PK Synergy Solutions" }) => {
               {navLinks.map((item) => (
                 <a
                   key={item.label}
-                  href={item.href}
+                  href={item.path}
+                  onClick={(event) => handleNavClick(event, item.path)}
                   className="rounded-xl px-3 py-2 text-sm font-semibold text-slate-600 transition hover:bg-emerald-50 hover:text-brand"
                 >
                   {item.label}
@@ -50,7 +64,8 @@ const Navbar = ({ companyName = "PK Synergy Solutions" }) => {
               ))}
 
               <a
-                href="#contact"
+                href="/contact"
+                onClick={(event) => handleNavClick(event, "/contact")}
                 className="ml-2 inline-flex items-center rounded-2xl bg-brand px-5 py-2 text-sm font-semibold text-white shadow-[0_12px_24px_rgba(13,74,51,0.20)] transition hover:-translate-y-0.5 hover:bg-brand-dark"
               >
                 Connect
@@ -79,8 +94,8 @@ const Navbar = ({ companyName = "PK Synergy Solutions" }) => {
                 {navLinks.map((item) => (
                   <a
                     key={item.label}
-                    href={item.href}
-                    onClick={() => setOpen(false)}
+                    href={item.path}
+                    onClick={(event) => handleNavClick(event, item.path)}
                     className="rounded-xl px-4 py-3 text-sm font-medium text-slate-700 transition hover:bg-emerald-50 hover:text-brand"
                   >
                     {item.label}
@@ -88,8 +103,8 @@ const Navbar = ({ companyName = "PK Synergy Solutions" }) => {
                 ))}
 
                 <a
-                  href="#contact"
-                  onClick={() => setOpen(false)}
+                  href="/contact"
+                  onClick={(event) => handleNavClick(event, "/contact")}
                   className="mt-2 inline-flex w-full items-center justify-center rounded-2xl bg-brand px-5 py-3 text-sm font-semibold text-white shadow-md"
                 >
                   Connect
